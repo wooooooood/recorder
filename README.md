@@ -1,3 +1,3 @@
 # 📹 recorder
 
-record what you've done-instead of planning
+record what you've done, instead of what you'll do
