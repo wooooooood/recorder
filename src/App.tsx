@@ -1,24 +1,21 @@
-import React from "react";
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
+import Input from "./components/Input";
+import Item, { ItemProps } from "./components/Item";
 
 function App() {
+  const [list, setList] = useState<Array<ItemProps>>([]);
+
+  const Enter = (content: string) => {
+    setList([...list, { time: new Date(), content }]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input onInput={Enter} />
+      {(list || []).map((x, key) => (
+        <Item key={key} time={x.time} content={x.content} />
+      ))}
     </div>
   );
 }
