@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Input from "./components/Input";
 import Item, { ItemProps } from "./components/Item";
+import Summary from "./components/Summary";
 
 function App() {
   const [list, setList] = useState<Array<ItemProps>>([]);
@@ -26,6 +27,7 @@ function App() {
       {(list || []).map((x, key) => (
         <Item key={key} time={x.time} content={x.content} newTime={x.newTime} />
       ))}
+      <Summary list={list} />
     </div>
   );
 }
