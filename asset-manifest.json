@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recorder/static/css/main.c287ca48.css",
+    "main.js": "/recorder/static/js/main.4e00033c.js",
+    "static/js/787.fba0badc.chunk.js": "/recorder/static/js/787.fba0badc.chunk.js",
+    "index.html": "/recorder/index.html",
+    "main.c287ca48.css.map": "/recorder/static/css/main.c287ca48.css.map",
+    "main.4e00033c.js.map": "/recorder/static/js/main.4e00033c.js.map",
+    "787.fba0badc.chunk.js.map": "/recorder/static/js/787.fba0badc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c287ca48.css",
+    "static/js/main.4e00033c.js"
+  ]
+}
