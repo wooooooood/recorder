@@ -59,6 +59,12 @@ const Summary = ({ list }: SummaryProps) => {
   return (
     <div className="bg-gray-100 rounded-xl p-5 space-y-1 text-left">
       <h3 className="font-bold text-lg">Today I ..</h3>
+      {list.length > 0 && (
+        <p>{`Switched between tasks for ${list.length - 1} times in total ${
+          new Set(list.map((l) => l.content)).size
+        } tasks`}</p>
+      )}
+
       {processedList.length > 0 ? (
         processedList.map((x) => (
           <p>{`${x.content} for ${totalMinutesToFormattedText(
